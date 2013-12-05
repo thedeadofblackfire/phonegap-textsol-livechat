@@ -14,6 +14,7 @@
 
 /* bubble box */
 /* http://www.ilikepixels.co.uk/drop/bubbler/ */
+/*
 .bubble 
 {
 position: relative;
@@ -54,26 +55,107 @@ z-index: 0;
 left: -22px;
 top: 28px;
 }
+*/
+ /* http://stackoverflow.com/questions/8866736/css-speech-bubble-with-box-shadow */
+.chat {
+    width: 400px;
+    font-family: sans-serif;
+    font-size:small;
+}
 
-
-.bubble1{
+.bubble2 {
     background-color: #F2F2F2;
     border-radius: 5px;
-    box-shadow: 0px 0px 6px #B2B2B2;
-    height: 200px;
-    margin: 20px;
-    width:  275px;
+    box-shadow: 0 0 6px #B2B2B2;
+    display: inline-block;
+    padding: 10px 18px;
+    position: relative;
+    vertical-align: top;
+}
+.bubble3 {
+    background-color: #D1C952;
+    border-radius: 5px;
+    box-shadow: 0 0 6px #B2B2B2;
+    display: inline-block;
+    padding: 10px 18px;
+    position: relative;
+    vertical-align: top;
 }
 
-.bubble1::after {
-    background-color: #F2F2F2;
-    box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
-    content: "\00a0";
-    display: block;
-    height: 20px;
-    left: -10px;
-    position: relative;
-    top: 20px;
-    transform: rotate( 45deg );
-    width:  20px;
+
+.tail {
+    //box-sizing: border-box;
+    //border:1px dotted red;
+    position: absolute;
+    top: 12px;
+    left: -18px;
+    height: 18px;
+    width:18px;
+    overflow:hidden;
 }
+.tail:before {
+    //box-sizing: border-box;
+    //border:1px dotted green;
+    background-color: #F2F2F2;
+    box-shadow: 0 0 6px #B2B2B2;
+    content: "\00a0";
+
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 12px;
+    height: 12px;
+    width:  12px;
+    -webkit-transform: skew( -45deg );
+    -moz-transform:    skew( -45deg );
+}
+
+.tail2 {
+    //box-sizing: border-box;
+    //border:1px dotted red;
+    position: absolute;
+    top: 12px;
+    right: -18px;
+    height: 18px;
+    width:18px;
+    overflow:hidden;
+}
+.tail2:before {
+    //box-sizing: border-box;
+    //border:1px dotted green;
+    background-color: #F2F2F2;
+    box-shadow: 0 0 6px #B2B2B2;
+    content: "\00a0";
+
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 12px;
+    height: 12px;
+    width:  12px;
+    -webkit-transform: skew( -45deg );
+    -moz-transform:    skew( -45deg );
+}
+.me time {
+    display: block;
+  font-size: 0.7rem;
+  color: #ccc;
+}
+.me {
+    float: left;   
+    margin: 5px 45px 5px 20px;         
+}
+.you {
+    float: right;   
+    margin: 5px 45px 5px 20px;         
+    background-color: #D1C952;
+}
+.you time {
+  display: block;
+  font-size: 0.7rem;
+  color: #888;
+}
+.you .tail2:before {
+  background-color: #D1C952;
+}
+
