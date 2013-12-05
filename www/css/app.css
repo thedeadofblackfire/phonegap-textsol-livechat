@@ -10,3 +10,70 @@
   left: 50%;
   margin: -64px 0px 0px -64px;
 }
+
+
+/* bubble box */
+/* http://www.ilikepixels.co.uk/drop/bubbler/ */
+.bubble 
+{
+position: relative;
+width: 250px;
+height: 130px;
+padding: 0px;
+background: #f5f5f5;
+-webkit-border-radius: 17px;
+-moz-border-radius: 17px;
+border-radius: 17px;
+border: #418DD6 solid 2px;
+}
+
+.bubble:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 12px 19px 12px 0;
+border-color: transparent #f5f5f5;
+display: block;
+width: 0;
+z-index: 1;
+left: -19px;
+top: 29px;
+}
+
+.bubble:before 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 13px 20px 13px 0;
+border-color: transparent #418DD6;
+display: block;
+width: 0;
+z-index: 0;
+left: -22px;
+top: 28px;
+}
+
+
+.bubble1{
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px #B2B2B2;
+    height: 200px;
+    margin: 20px;
+    width:  275px;
+}
+
+.bubble1::after {
+    background-color: #F2F2F2;
+    box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
+    content: "\00a0";
+    display: block;
+    height: 20px;
+    left: -10px;
+    position: relative;
+    top: 20px;
+    transform: rotate( 45deg );
+    width:  20px;
+}
