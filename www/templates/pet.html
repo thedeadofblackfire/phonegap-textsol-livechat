@@ -8,10 +8,8 @@
   <content has-header="true" padding="true">
     {{ pet.description }}
     
-    <div class="bubble">odqsodqosd sqdoq doq sdosq dq</div>
-    
-    <div class="bubble1">test nicolas</div>
-    
+
+
     <!-- http://stackoverflow.com/questions/8866736/css-speech-bubble-with-box-shadow -->
 <style>
 .chat {
@@ -29,6 +27,16 @@
     position: relative;
     vertical-align: top;
 }
+.bubble3 {
+    background-color: #D1C952;
+    border-radius: 5px;
+    box-shadow: 0 0 6px #B2B2B2;
+    display: inline-block;
+    padding: 10px 18px;
+    position: relative;
+    vertical-align: top;
+}
+
 
 .tail {
     //box-sizing: border-box;
@@ -57,15 +65,69 @@
     -moz-transform:    skew( -45deg );
 }
 
+.tail2 {
+    //box-sizing: border-box;
+    //border:1px dotted red;
+    position: absolute;
+    top: 12px;
+    right: -18px;
+    height: 18px;
+    width:18px;
+    overflow:hidden;
+}
+.tail2:before {
+    //box-sizing: border-box;
+    //border:1px dotted green;
+    background-color: #F2F2F2;
+    box-shadow: 0 0 6px #B2B2B2;
+    content: "\00a0";
+
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 12px;
+    height: 12px;
+    width:  12px;
+    -webkit-transform: skew( -45deg );
+    -moz-transform:    skew( -45deg );
+}
+.me time {
+    display: block;
+  font-size: 0.7rem;
+  color: #ccc;
+}
 .me {
     float: left;   
     margin: 5px 45px 5px 20px;         
 }
+.you {
+    float: right;   
+    margin: 5px 45px 5px 20px;         
+    background-color: #D1C952;
+}
+.you time {
+  display: block;
+  font-size: 0.7rem;
+  color: #888;
+}
+.you .tail2:before {
+  background-color: #D1C952;
+}
+
 </style>
 <div class="chat">
-    <div class="bubble2 me"><span class='tail'>&nbsp;</span>Hello there! Here's some more text for your bubble. And here's a bit more text so that wrapping happens.</div>
+    <div class="bubble2 me"><span class='tail'>&nbsp;</span>
+    Hello there! Here's some more text for your bubble. And here's a bit more text so that wrapping happens.
+     <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
+    </div>
        
-    <div class="bubble2 me"><span class='tail'>&nbsp;</span> And here's a bit more text so that wrapping happens.</div>
+    <div class="bubble2 you"><span class='tail2'>&nbsp;</span> And here's a bit more text so that wrapping happens.
+       <time datetime="2009-11-13T20:14">37 mins</time>
+    </div>
+    
+     <div class="bubble2 you"><span class='tail2'>&nbsp;</span> are you there?
+       <time datetime="2009-11-13T20:14">22 mins</time>
+    </div>
             
 </div>
 
