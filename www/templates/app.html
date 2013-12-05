@@ -10,13 +10,17 @@
     <!-- Pets tab -->
     <tab title="Chats" icon="icon ion-chatbubbles ion-homexxx" ng-controller="PetsTabCtrl">
       <content has-header="true" has-tabs="true">
+      <div class="item item-divider">
+          Activities
+        </div>
         <list>
-          <link-item ng-repeat="pet in pets" type="item-text-wrap item-icon-left" href="#/pet/{{pet.id}}" title="{{pet.title}}">
+          <link-item ng-repeat="pet in pets" type="item-text-wrap item-icon-left" href="#/pet/{{pet.id}}" title="{{pet.title}}">           
           <i class="icon ion-chatbubble-working balanced"></i>
               <h3>{{pet.title}}</h3>
-              <p>{{pet.description}}
-              <span class="badge badge-balanced">+2</span> </p>
+              <font color=orange>{{pet.description}}</font>
               
+              <span class="badge badge-balanced">+2</span>
+              <span class="badge">{{pet.timeago}}</span>
             </item>
           </link-item>
         </list>
