@@ -3,10 +3,10 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.webcreators.blkapp"
+        id        = "com.webcreators.textsollivechat"
         version   = "0.0.1">
 
-    <name>Ionic Demo</name>
+    <name>Textsol Live Chat (ionic)</name>
 
     <description>
          A sample Ionic Framework app using Cordova and AngularJS
@@ -47,7 +47,6 @@
     <!-- Plugins can also be added here. -->
     
     <gap:plugin name="org.apache.cordova.device" />
-    <gap:plugin name="org.apache.cordova.geolocation" />
 
     
     <!--

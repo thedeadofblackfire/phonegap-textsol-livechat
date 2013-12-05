@@ -11,9 +11,12 @@
     <tab title="Chats" icon="icon ion-chatbubbles ion-homexxx" ng-controller="PetsTabCtrl">
       <content has-header="true" has-tabs="true">
         <list>
-          <link-item ng-repeat="pet in pets" type="item-text-wrap" href="#/pet/{{pet.id}}">
+          <link-item ng-repeat="pet in pets" type="item-text-wrap item-icon-left" href="#/pet/{{pet.id}}" title="{{pet.title}}">
+          <i class="icon ion-chatbubble-working balanced"></i>
               <h3>{{pet.title}}</h3>
-              <p>{{pet.description}}</p>
+              <p>{{pet.description}}
+              <span class="badge badge-balanced">+2</span> </p>
+              
             </item>
           </link-item>
         </list>
@@ -44,7 +47,7 @@
     </tab>
 
     <!-- Home tab -->
-    <tab title="About" icon="icon ion-search">
+    <tab title="Profile" icon="icon ion-searchxxx ion-gear-bxxx ion-ios7-gear">
       <content has-header="true" has-tabs="true" padding="true">
         <h3>About this app</h3>
         <p>
@@ -89,30 +92,7 @@
 
       </content>
     </tab>
-    
-    <!-- Map tab -->
-    <tab title="Map" icon="icon ion-map">
-      <content has-header="true" has-tabs="true" padding="false">
-  
-        <!--<h3>About this app</h3>-->
-       
-        <div class="google-map" say-where="" latitude="33.6251892595411" longitude="-117.89167414257817"></div>
-
-      </content>
-                <script>
-                /*
-        function initialize() {
-            var myLatlng = new google.maps.LatLng( 51.520838, -0.140261 );
-            var myOptions = {
-                zoom: 15,
-                center: myLatlng,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            }
-            var map = new google.maps.Map( document.getElementById( "map_canvas" ), myOptions );
-        }
-        */
-    </script>  
-    </tab>
+   
 
   </tabs>
 </nav-page>
