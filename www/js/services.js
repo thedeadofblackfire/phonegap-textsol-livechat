@@ -8,10 +8,10 @@ angular.module('starter.services', [])
 
   // Some fake testing data
   var pets = [
-    { id: 0, title: 'NICK TARTO', description: 'Furry little creatures. ', timeago: ' few seconds ago' },
+    { id: 0, title: 'NICK TARTO', description: 'France', timeago: ' few seconds ago' },
     { id: 1, title: 'CLIFF RAMSEY', description: 'California, USA', timeago: '35s' },
-    { id: 2, title: 'DAVE DOE', description: 'Everyone likes turtles.', timeago: '1m 12s' },
-    { id: 3, title: 'RYAN CHIPOLATA', description: 'An advanced pet. Needs millions of gallons of salt water.', timeago: '28m 26s' }
+    { id: 2, title: 'DAVE DOE', description: 'El Dorado', timeago: '1m 12s' },
+    { id: 3, title: 'RYAN CHIPOLATA', description: 'Newport Beach', timeago: '28m 26s' }
   ];
 
   return {
